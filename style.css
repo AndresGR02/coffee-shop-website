@@ -1,0 +1,27 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.slide-carousel {
+  margin-top: 70px;
+}
+
+.c-item {
+  height: 480px;
+}
+
+.c-image {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.c-items {
+  width: 20rem;
+  transition: all .1s linear;
+}
+
+.c-items:hover {
+  width: 21rem;
+
+}

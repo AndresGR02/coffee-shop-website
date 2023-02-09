@@ -6,6 +6,7 @@ body {
   margin-top: 70px;
 }
 
+
 .c-item {
   height: 480px;
 }
@@ -17,11 +18,20 @@ body {
 }
 
 .c-items {
-  width: 20rem;
-  transition: all .1s linear;
+  transform: scale(1);
+  transition: all .2s linear;
+}
+
+h1 {
+  margin: 0 auto;
 }
 
 .c-items:hover {
-  width: 21rem;
+  transform: scale(1.1);
+  cursor: pointer;
 
+}
+
+.title-font {
+  font-family: 'Abril Fatface';
 }

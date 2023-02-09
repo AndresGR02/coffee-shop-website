@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Shop</title>
   </head>
@@ -17,7 +20,7 @@
     <nav class="fixed-top navbar d-flex space-between navbar-expand-lg py-3 bg-light navbar-light">
       <div class="container">
           
-        <a href="#" class="navbar-brand">Marcin's Coffee</a>
+        <a href="#" class="navbar-brand"><h1 class="fs-5">Marcin's Coffee</h1></a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <i class="bi bi-cup-hot"></i>
@@ -42,7 +45,7 @@
     </nav>
 
     <!--Slide Section-->
-    <div class="carousel slide slide-carousel" id="imgSlide">
+    <div class="carousel slide slide-carousel" id="imgSlide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         
         <button type="button" class="active" data-bs-target="#imgSlide" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
@@ -53,27 +56,27 @@
       <div class="carousel-inner">
         <div class="carousel-item active c-item">
           
-          <img src="images/coffee1.jpg" alt="" class="d-block w-100 c-image">
+          <img src="images/coffee1.jpg" alt="" class="d-block w-100 placeholder-wave c-image">
           <div class="carousel-caption">
-            <h1 class="mt-5 fs-7 fw-bolder text-uppercase">Enjoy</h1>
+            <p class="mt-5 fs-2 title-font text-uppercase">Enjoy</p>
             <p class="fs-4">Coffee from other cultures</p>
           
           </div>
         </div>
         <div class="carousel-item c-item">
           
-          <img src="images/bread1.jpg" alt="" class="d-block w-100 c-image">
+          <img src="images/bread1.jpg" alt="" class="placeholder-wave d-block w-100 c-image">
           <div class="carousel-caption">
-            <h1 class="mt-5 fs-7 fw-bolder text-uppercase">Share</h1>
+            <p class="mt-5 fs-2 title-font text-uppercase">Share</p>
             <p class="fs-4">With your loved ones</p>
           
           </div>
         </div>
         <div class="carousel-item c-item">
           
-          <img src="images/donuts1.jpg" alt="" class="d-block w-100 c-image">
+          <img src="images/donuts1.jpg" alt="" class="placeholder-wave d-block w-100 c-image">
           <div class="carousel-caption">
-            <h1 class="mt-5 fs-7 fw-bolder text-uppercase">Relish</h1>
+            <p class="mt-5 fs-2 title-font text-uppercase">Relish</p>
             <p class="fs-4">Our best dishes</p>
           
           </div>
@@ -92,66 +95,105 @@
     </div>
 
     <!--Products Section-->
-    <section class="bg-dark pt-5" id="Buy">
-      <div class="container pt-5 pb-5 d-flex justify-content-center">
-        <div class="row g-5">
+    <section class="bg-dark d-flex justify-content-center pt-5" id="Buy">
+      <div class="container pb-5">
+        <h2 class="text-light text-center title-font pb-5">Our Products</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-5">
+          
           <div class="col">
-            <div class="card c-items">
-              <img src="images/donuts2.jpg" alt="" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title fs-3 fw-bolder">Retro Donuts</h5>
-                <p class="card-text">These delicious donuts were made following the founder's original recipe from the 60s</p>
+            <div id="donut" class="btn" data-bs-toggle="modal" data-bs-target="#buyModal">
+              <div class="card c-items">
+                <img src="images/donuts2.jpg" alt="" class="card-img-top">
+                <div class="card-body">
+                  <h2 class="card-title fs-3 fw-bolder">Retro Donuts</h2>
+                  <p class="card-text">These delicious donuts were made following the founder's original recipe from the 60s</p>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="col">
-            <div class="card c-items">
-              <img src="images/coco1.jpg" alt="" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title fs-3 fw-bolder">Beach Time</h5>
-                <p class="card-text">How to forget the sweet flavour of the beach's best product</p>
+            <div id="coco" class="btn" data-bs-toggle="modal" data-bs-target="#buyModal">
+              <div class="card c-items">
+                <img src="images/coco1.jpg" alt="" class="card-img-top">
+                <div class="card-body">
+                  <h3 class="card-title fs-3 fw-bolder">Beach Time</h3>
+                  <p class="card-text">How to forget the sweet flavour of the beach's best product</p>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="col">
-            <div class="card c-items">
-              <img src="images/carrotcake1.jpg" alt="" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title fs-3 fw-bolder">Bunny's favorite</h5>
-                <p class="card-text">Try this delicious cake, we assure you it will make you jump from happiness :)</p>
+            <div id="carrot" class="btn" data-bs-toggle="modal" data-bs-target="#buyModal">
+              <div class="card c-items">
+                <img src="images/carrotcake1.jpg" alt="" class="card-img-top">
+                <div class="card-body">
+                  <h3 class="card-title fs-3 fw-bolder">Bunny's favorite</h3>
+                  <p class="card-text">Try this delicious cake, we assure you it will make you jump from happiness :)</p>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="col">
-            <div class="card c-items">
-              <img src="images/cocoa1.jpg" alt="" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title fs-3 fw-bolder">Hot Cocoa</h5>
-                <p class="card-text">It's just hot cocoa... Cozy as always</p>
+            <div id="cocoa" class="btn" data-bs-toggle="modal" data-bs-target="#buyModal">
+              <div class="card c-items">
+                <img src="images/cocoa1.jpg" alt="" class="card-img-top">
+                <div class="card-body">
+                  <h3 class="card-title fs-3 fw-bolder">Hot Cocoa</h3>
+                  <p class="card-text">It's just hot cocoa... Cozy as always</p>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="col">
-            <div class="card c-items">
-              <img src="images/coffee2.jpg" alt="" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title fs-3 fw-bolder">Costa Rican Coffee</h5>
-                <p class="card-text">Brought right from Costa Rica, one of the best coffees in the world!</p>
+            <div id="coffee" class="btn" data-bs-toggle="modal" data-bs-target="#buyModal">
+              <div class="card c-items">
+                <img src="images/coffee2.jpg" alt="" class="card-img-top">
+                <div class="card-body">
+                  <h3 class="card-title fs-3 fw-bolder">Costa Rican Coffee</h3>
+                  <p class="card-text">Brought right from Costa Rica, one of the best coffees in the world!</p>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="col">
-            <div class="card c-items">
-              <img src="images/churros1.jpg" alt="" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title fs-3 fw-bolder">Churros</h5>
-                <p class="card-text">Who doesn't like churros?</p>
+            <div id="churros" class="btn" data-bs-toggle="modal" data-bs-target="#buyModal">
+              <div class="card c-items">
+                <img src="images/churros1.jpg" alt="" class="card-img-top">
+                <div class="card-body">
+                  <h3 class="card-title fs-3 fw-bolder">Churros</h3>
+                  <p class="card-text">Who doesn't like churros?</p>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="buyModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="buyModalTitle" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="buyModalTitle">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="buyModalBody">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="app"></div>
     <script type="module" src="/main.js"></script>

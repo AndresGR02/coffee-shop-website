@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', e => {
             
                 let col3 = document.createElement('div')
                 col3.className = 'col'
-                col3.innerText = '$' + new getProductInfo(key).price * currentCart[key]
+                col3.innerText = '$' + Math.round(new getProductInfo(key).price * currentCart[key] * 100) / 100
                 totalPrice +=  new getProductInfo(key).price * currentCart[key]
 
                 rowDiv.append(col1)
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', e => {
     
         let col3 = document.createElement('div')
         col3.className = 'col'
-        col3.innerText = 'TOTAL $' + totalPrice
+        col3.innerText = 'TOTAL $' + Math.round(totalPrice*100)/100
 
         rowDiv.append(col1)
         rowDiv.append(col2)
